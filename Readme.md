@@ -1,4 +1,4 @@
-# Node.js Express API with Typescript and PostgreSQL, usign Docker
+# Node.js Express API with Typescript and PostgreSQL, using Docker
 Basic example of an API endpoint using Node.js with Express.js written in Typescript.js, and a PostgreSQL database.
 
 ## How to run
