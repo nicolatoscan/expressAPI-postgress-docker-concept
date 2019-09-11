@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: utente
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: main
+    volumes:
+        - ./dbbino:/docker-entrypoint-initdb.d
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  api:
+    build: 
+      context: api
+      dockerfile: DockerFile
+    restart: always
+    ports:
+      - 3000:3000
